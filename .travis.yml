@@ -5,5 +5,5 @@ import:
   - source: 'form8ion/.travis-ci:node.yml'
   - source: 'form8ion/.travis-ci:authenticated-semantic-release.yml'
 script:
-  - "c=0; while true; do npm lint:travis && ((c = c + 1)) || break; done; echo $c"
+  - "c=0; while true; do npm run lint:travis && ((c = c + 1)) || break; done; echo $c"
 after_success: 'npm run coverage:report'
